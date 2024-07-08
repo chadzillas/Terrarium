@@ -7,6 +7,28 @@ h1 {
 	text-align: center;
 }
 
+#header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#reset-button {
+    margin-right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3a241d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#reset-button:hover {
+    background-color: #5b362b;
+}
+
 #left-container {
     background-color: #eee;
 	width: 15%;
