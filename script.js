@@ -16,23 +16,23 @@ dragElement(document.getElementById('item-left'));
 dragElement(document.getElementById('item-right'));
 
 document.addEventListener("DOMContentLoaded", function() {
-    	const plantImages = document.querySelectorAll('.plant');
-    	const initialSources = {};
+    const plantImages = document.querySelectorAll('.plant');
+	const initialSources = {};
 
-    	plantImages.forEach(img => {
-        	initialSources[img.id] = img.src;
+    plantImages.forEach(img => {
+        initialSources[img.id] = img.src;
 		dragElement(img);
-    	});
+    });
 
-    	// Add event listener to the reset button
-    	const resetButton = document.getElementById('reset-button');
+    // Add event listener to the reset button
+    const resetButton = document.getElementById('reset-button');
    	resetButton.addEventListener('click', function() {
-       		plantImages.forEach(img => {
-            		img.src = initialSources[img.id];
+       	plantImages.forEach(img => {
+            img.src = initialSources[img.id];
 			img.style.top = ''; // Reset position
-            		img.style.left = ''; // Reset position
-        	});
-    	});
+            img.style.left = ''; // Reset position
+        });
+    });
 });
 
 function dragElement(terrariumElement) {
